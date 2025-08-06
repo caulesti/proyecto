@@ -15,6 +15,12 @@ export const InventarioProvider = ({ children }) => {
         .then(data => setProductos(data))
     },[])
 
+    const cargarProductos = () => {
+        fetch('http://localhost:8080/productos')
+            .then(response => response.json())
+            .then(data => setProductos(data))
+    }
+
     const [searchByIdProducto, setSearchByIdProducto] = useState(null)
 
     // Movimientos
@@ -46,6 +52,7 @@ export const InventarioProvider = ({ children }) => {
             movimientos,
             setMovimientos,
             setSearchByIdProducto,
+            cargarProductos
         }}>
             { children }
         </InventarioContext.Provider>

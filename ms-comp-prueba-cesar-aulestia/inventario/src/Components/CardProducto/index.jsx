@@ -1,6 +1,6 @@
 const CardProduct = ( producto ) => {
     return (
-        <div className="border rounded-lg w-50 m-2 p-4 shadow bg-white hover:shadow-lg transition">
+        <div className="border rounded-lg w-50 h-45 m-2 p-4 shadow bg-white hover:shadow-lg transition">
             <div className="mb-2">
                 <h2 className="text-lg font-semibold text-gray-800">{producto.producto.nombre}</h2>
                 <p className="text-green-600 font-bold">${producto.producto.price}</p>

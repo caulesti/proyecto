@@ -4,13 +4,15 @@ import Movimientos from '../Movimientos'
 import Productos from '../Productos'
 import NotFound from '../NotFound'
 import Navbar from '../../Components/Navbar'
+import Proveedor from '../Proveedor'
 import './App.css'
 import { InventarioProvider } from '../../Context'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    {path: '/home', element: <Home />},
+    {path: '/', element: <Home />},
     {path: '/productos', element: <Productos />},
+    {path: '/proveedor', element: <Proveedor />},
     {path: '/movimientos', element: <Movimientos />},
     {path: '/*', element: <NotFound />},
   ])
