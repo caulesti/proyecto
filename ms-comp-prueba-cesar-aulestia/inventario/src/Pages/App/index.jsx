@@ -1,5 +1,7 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 import Home from '../Home'
+import Movimientos from '../Movimientos'
+import Productos from '../Productos'
 import NotFound from '../NotFound'
 import Navbar from '../../Components/Navbar'
 import './App.css'
@@ -7,7 +9,9 @@ import { InventarioProvider } from '../../Context'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    {path: '/productos', element: <Home />},
+    {path: '/home', element: <Home />},
+    {path: '/productos', element: <Productos />},
+    {path: '/movimientos', element: <Movimientos />},
     {path: '/*', element: <NotFound />},
   ])
   return routes
